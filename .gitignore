@@ -1,0 +1,56 @@
+# Processing
+*.class
+*.jar
+applet/
+application.*
+application.macosx/
+application.linux/
+application.windows/
+out/
+
+# Sketch-local libraries (install via Library Manager instead)
+code/
+
+# Generated audio / exports
+*.wav
+*.mp3
+*.ogg
+*.flac
+*.aiff
+*.m4a
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors & IDEs
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+.cache/
+
+# Secrets — never commit real API keys
+.env
+.env.local
+.env.*.local
+!.env.example
+secrets.*
+
+output
