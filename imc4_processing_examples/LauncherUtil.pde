@@ -37,6 +37,10 @@ void setupLauncher() {
     .setPosition(x, y + gap * 5)
     .setSize(w, h)
     .setLabel("fluid GPU");
+  cp5.addButton("btnLaunchHandPose")
+    .setPosition(x, y + gap * 6)
+    .setSize(w, h)
+    .setLabel("hand catch");
 
   println("Launcher ready - pick a sketch to open in a new process.");
 }
@@ -76,6 +80,10 @@ void btnLaunchFluidCpu() {
 
 void btnLaunchFluidGpu() {
   launchSketchFolder("fluid_gpu");
+}
+
+void btnLaunchHandPose() {
+  launchSketchFolder("hand_pose");
 }
 
 void launchSketchFolder(String folderName) {

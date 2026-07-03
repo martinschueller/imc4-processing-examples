@@ -16,8 +16,9 @@ The launcher starts each module as a separate Processing process:
 - Music generation
 - Fluid CPU
 - Fluid GPU
+- OpenCV hand catch
 
-The fluid windows include a ControlP5 `particles` slider, so you can compare CPU and GPU performance at different particle counts.
+The fluid windows include a ControlP5 `particles` slider, so you can compare CPU and GPU performance at different particle counts. The OpenCV example uses webcam contour tracking to catch falling balls with your hand.
 
 Each module folder can also be opened and run directly in Processing.
 
@@ -25,9 +26,11 @@ Each module folder can also be opened and run directly in Processing.
 
 - Processing 4.x
 - ControlP5, installed via **Sketch > Import Library > Add Library**
+- Video library, for the OpenCV webcam example
+- OpenCV for Processing, for the hand catch example
 - `processing-java` command-line tool for launching modules from the start sketch
 
-On macOS, the launcher first tries `/Applications/Processing.app/Contents/MacOS/processing-java`, then falls back to `processing-java` on your `PATH`.
+On macOS, the launcher tries common absolute paths such as `/usr/local/bin/processing-java` and `/opt/homebrew/bin/processing-java`, then falls back to the Processing app CLI and your shell `PATH`.
 
 ## API Setup
 
@@ -53,6 +56,7 @@ soundscape/                 soundscape generation
 music/                      music generation
 fluid_cpu/                  Java2D particle simulation
 fluid_gpu/                  P2D particle simulation
+hand_pose/                  OpenCV webcam hand catch game
 ```
 
 Processing compiles every `.pde` file in a sketch folder as a tab. The previous symlink approach linked shared files into every example folder, so each folder appeared to contain every sketch. This version avoids symlinks: every module is a real independent sketch folder.
