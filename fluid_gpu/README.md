@@ -2,15 +2,19 @@
 
 This sketch uses the **P2D renderer**, which is GPU-accelerated via OpenGL.
 
-## How to compare
+## How to run
 
-1. Run this sketch (`fluid_gpu`)
-2. Run `fluid_cpu` in another window
-3. Compare the FPS displayed in each
+1. Open `../imc4_processing_examples/imc4_processing_examples.pde` in Processing.
+2. Run the launcher.
+3. Click **fluid GPU** to open the simulation in a new window.
+4. Use the **particles** slider (ControlP5) to change particle count (2000-50000).
+5. Open **fluid CPU** from the same launcher to compare side by side.
+
+You can also open `fluid_gpu.pde` directly in Processing.
 
 ## Expected results
 
-With 8000 particles:
+With 20000 particles:
 - **GPU (P2D)**: typically 60+ FPS
 - **CPU (default)**: typically 10-30 FPS (varies by machine)
 
@@ -25,5 +29,7 @@ The GPU can draw thousands of shapes in parallel, while the CPU draws them seque
 
 ## Try it
 
-- Change `numParticles` to 2000, 8000, 20000 and observe how each renderer scales
+- Drag the particles slider and watch FPS change
 - Click and drag to interact with the particles
+
+Implementation code: `fluid_gpu.pde`
