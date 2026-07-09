@@ -232,7 +232,7 @@ boolean isApiKeyConfigured() {
 }
 
 String loadEnvValue(String key, String fallback) {
-  File envFile = new File(sketchPath("../talking_to_llm/.env"));
+  File envFile = new File(sketchPath("../.env"));
   if (!envFile.exists()) return fallback;
   BufferedReader reader = null;
   try {

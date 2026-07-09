@@ -132,7 +132,7 @@ boolean isApiKeyConfigured() {
 }
 
 String loadEnvValue(String key, String fallback) {
-  File envFile = new File(sketchPath("../talking_to_llm/.env"));
+  File envFile = new File(sketchPath("../.env"));
   if (!envFile.exists()) return fallback;
   BufferedReader reader = null;
   try {
@@ -199,7 +199,7 @@ byte[] readAllBytes(InputStream is) throws IOException {
 }
 
 String saveWav(byte[] wavBytes, String prefix) {
-  File outDir = new File(sketchPath("../talking_to_llm/output"));
+  File outDir = new File(sketchPath("../output"));
   if (!outDir.exists()) outDir.mkdirs();
   String path = outDir.getAbsolutePath() + "/" + prefix + "_" + System.currentTimeMillis() + ".wav";
   saveBytes(path, wavBytes);

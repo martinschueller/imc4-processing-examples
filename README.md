@@ -34,17 +34,19 @@ On macOS, the launcher tries common absolute paths such as `/usr/local/bin/proce
 
 ## API Setup
 
-Copy the example env file and set your bearer token:
+Voice and music sketches need a bearer token. From the repo root:
 
 ```bash
-cp talking_to_llm/.env.example talking_to_llm/.env
+cp .env.example .env
 ```
+
+Edit `.env` and set your token:
 
 ```env
 API_KEY=your-token-here
 ```
 
-The voice/music sketches read `talking_to_llm/.env` and write generated audio to `talking_to_llm/output/`.
+The sketches read `.env` from the repo root and write generated audio to `output/`. Both paths are gitignored.
 
 ## Sketch Folders
 
